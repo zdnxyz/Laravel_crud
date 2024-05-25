@@ -70,7 +70,6 @@ class ProdukController extends Controller
         $image = $request->file('image');
         $image->storeAs('public/produks', $image->hashName());
         //delete old image
-        Storage::delete('public/produks/' . $produk->image);
 
         $produk->image = $image->hashName();
         $produk->save();
@@ -81,7 +80,6 @@ class ProdukController extends Controller
     public function destroy($id)
     {
         $produk = Produk::findOrFail($id);
-        Storage::delete('public/produks/' . $produk->image);
         $produk->delete();
         return redirect()->route('produk.index');
 
