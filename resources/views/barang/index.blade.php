@@ -23,7 +23,7 @@
                                     <th>Nama Barang</th>
                                     <th>Harga</th>
                                     <th>Stok</th>
-                                    <th>Merek ID</th>
+                                    <th>ID Merek</th>
                                 </tr>
                             </thead>
                             <tbody>
